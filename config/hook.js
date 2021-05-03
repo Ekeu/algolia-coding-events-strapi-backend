@@ -1,11 +1,11 @@
-module.exports = {
+module.exports = ({ env }) => ({
   settings: {
     algolia: {
       enabled: true,
-      applicationId: "45AF0GR5PB",
-      apiKey: "9c6989cf3a87209f52a7abf3da4c4179",
+      applicationId: env("ALGOLIA_APPLICATION_ID"),
+      apiKey: env("ALGOLIA_API_KEY"),
       debug: true, // default: false
-      prefix: "cl", // default: Strapi environment (strapi.config.environment)
+      prefix: "prod", // default: Strapi environment (strapi.config.environment)
     },
   },
-};
+});
